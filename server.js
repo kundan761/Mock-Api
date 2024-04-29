@@ -6,6 +6,19 @@ const middlewares = jsonServer.defaults();
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
+// Endpoint to get user data by ID
+server.get('/users/:id/data', (req, res) => {
+  const userId = req.params.id;
+  const user = router.db.get('users').find({ id: userId }).value();
+
+  if (user) {
+    res.json(user.data);
+  } else {
+    res.sendStatus(404);
+  }
+});
+
+// Endpoint to add data to user
 server.post('/users/:id/data', (req, res) => {
   const userId = req.params.id;
   const user = router.db.get('users').find({ id: userId }).value();
@@ -23,5 +36,3 @@ server.use(router);
 server.listen(3000, () => {
   console.log('JSON Server is running');
 });
-
-
