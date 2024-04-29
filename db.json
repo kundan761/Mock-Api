@@ -1,0 +1,28 @@
+{
+    "users": [
+      {
+        "id": "e19b",
+        "name": "abc",
+        "email": "abc@gmail.com",
+        "password": "1234",
+        "agreed": true,
+        "data": []
+      },
+      {
+        "id": "8402",
+        "name": "abcd",
+        "email": "abcd@gmail.com",
+        "password": "Abcd@123",
+        "agreed": true,
+        "data": []
+      },
+      {
+        "id": "7a87",
+        "name": "Kundan",
+        "email": "kundankumarsuraj2002@gmail.com",
+        "password": "Kundan@123",
+        "agreed": true,
+        "data": []
+      }
+    ]
+  }
